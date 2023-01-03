@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: hsl(210, 46%, 95%);
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  color: hsl(0, 0%, 81%);
+}
+
+.container {
+  width: 90vw;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-rows: repeat(8, auto);
+}
+
+.content {
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.big-area {
+  grid-row: span 2;
+}
+
+.daniel {
+  background: url(../images/bg-pattern-quotation.svg) hsl(263, 55%, 52%);
+  background-repeat: no-repeat;
+  background-position: 93% 0%;
+}
+
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.patrick {
+  background: hsl(219, 29%, 14%);
+}
+
+.jeanette {
+  width: 100%;
+}
+
+.black-text {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
+
+.black-text p {
+  color: hsl(217, 19%, 35%);
+  opacity: 85%;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 75px auto auto;
+  grid-template-rows: repeat(2, auto);
+  margin: 0 1.5rem 1rem 1.5rem;
+}
+
+img {
+  grid-row: 1 / -1;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.name {
+  grid-column: 2 / -1;
+  align-self: end;
+  font-size: 1.05rem;
+}
+
+.position {
+  align-self: center;
+  opacity: 50%;
+}
+
+.feedback {
+  opacity: 70%;
+  line-height: 1.35;
+  margin: 0 1.5rem;
+}
+
+.title {
+  font-size: 1.35rem;
+  line-height: 1.5;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    width: min(90vw, 1400px);
+    margin: 3rem auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .daniel {
+    grid-column: 1 / span 2;
+    grid-row: span 1;
+  }
+
+  .jeanette {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .kira {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+
+  .patrick {
+    grid-column: 2 / span 2;
+    grid-row: span 1;
+  }
+}
